@@ -11,16 +11,37 @@ crontab -e
 
 Then add the following line to schedule the script to run at 3:00 AM every Sunday:
 
-0 3 * * 0 /path/to/your/script.sh
+0 3 * * 0 /path/to/your/lynis_automation.sh
 
-Replace /path/to/your/script.sh with the actual path to your Bash script. Save the file and exit the editor.
+Replace /path/to/your/lynis_automation.sh with the actual path to your Bash script. Save the file and exit the editor.
 
 This script assumes you have lynis and the mail command installed on your system. You might need to adjust the paths and commands according to your system's configuration. Additionally, be mindful of sending sensitive data via email and ensure you have the necessary permissions to automate tasks and read audit data.
 
 Instruction for Cloning and Running
 Cloning the Repository:
 
-git clone <repository_url>
+git clone https://github.com/A-Alexandrov2021/lynis-automation.git
 
+Running the Script:
+
+Navigate into the repository directory: cd lynis-automation
+Make the script executable: chmod +x lynis_automation.sh
+Run the script: ./lynis_automation.sh
+
+Setting Up Cron Job
+Edit Cron Jobs:
+
+Open the terminal and run: crontab -e
+Add Cron Job:
+
+Add the following line to schedule the script to run at 3:00 AM every Sunday:
+
+0 3 * * 0 /path/to/lynis-automation/lynis_automation.sh
+
+Replace /path/to/lynis-automation/script.sh with the actual path to your script in the cloned repository.
+
+Save and Exit:
+
+Save the file and exit the editor.
 
 
