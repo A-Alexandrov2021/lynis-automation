@@ -45,6 +45,7 @@ Save and Exit:
 Save the file and exit the editor.
 
 Important Notes
+
 Ensure that the lynis and mail commands are available on the system where the script will be run.
 Make sure to handle sensitive information securely, especially when sending data via email.
 Test the script and cron job thoroughly to ensure they work as expected.
